@@ -21,4 +21,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - 'mvn test jacoco:report coveralls:report'
+            - 'mvn clean test saga:coverage coveralls:report'
