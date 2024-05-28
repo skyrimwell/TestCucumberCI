@@ -22,4 +22,4 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - 'mvn clean test saga:coverage coveralls:report'
+            - 'mvn cobertura:cobertura coveralls:report'
