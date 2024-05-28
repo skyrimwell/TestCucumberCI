@@ -21,5 +21,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
-            - 'mvn cobertura:cobertura coveralls:report'
+            - 'curl -sL https://coveralls.io/coveralls-linux.tar.gz | tar -xz && ./coveralls'
