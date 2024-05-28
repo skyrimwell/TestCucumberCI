@@ -13,3 +13,13 @@ blocks:
             - checkout
             - sem-version java 17
             - mvn -B package --file pom.xml
+  - name: 'Block #2'
+    task:
+      env_vars:
+        - name: COVERALLS_REPO_TOKEN
+          value: 8uiAoe1QA6RSJP50kEqs2gLjWTIFj0xis
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - checkout
+            - 'mvn clean test saga:coverage cobertura:cobertura coveralls:report'
